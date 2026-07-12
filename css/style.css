@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'ClashDisplay-Bold.otf';
+    src: url(../fonts/ClashDisplay-Bold.otf);
+}
+
+@font-face {
+    font-family: 'ClashDisplay-Extralight.otf';
+    src: url(../fonts/ClashDisplay-Extralight.otf);
+}
+
+@font-face {
+    font-family: 'ClashDisplay-Light.otf';
+    src: url(../fonts/ClashDisplay-Light.otf);
+}
+
+@font-face {
+    font-family: 'ClashDisplay-Medium.otf';
+    src: url(../fonts/ClashDisplay-Medium.otf);
+}
+
+@font-face {
+    font-family: 'ClashDisplay-Regular.otf';
+    src: url(../fonts/ClashDisplay-Regular.otf);
+}
+
+@font-face {
+    font-family: 'ClashDisplay-Semibold.otf';
+    src: url(../fonts/ClashDisplay-Semibold.otf);
+}
+
+:root {
+    --primary-color: #8237EC;
+    --light-text: #FFFFFF;
+    --dark-text: #000000;
+    --ff-clash-bold: 'ClashDisplay-Bold.otf', sans-serif;
+    --ff-clash-extralight: 'ClashDisplay-Extralight.otf', sans-serif;
+    --ff-clash-light: 'ClashDisplay-Light.otf', sans-serif;
+    --ff-clash-medium: 'ClashDisplay-Medium.otf', sans-serif;
+    --ff-clash-regular: 'ClashDisplay-Regular.otf', sans-serif;
+    --ff-clash-semibold: 'ClashDisplay-Semibold.otf', sans-serif;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.container {
+    max-width: 1344px;
+}
+
+.primary-btn {
+    padding: 14px 33px;
+    border-radius: 100px;
+    background: var(--primary-color);
+    color: var(--light-text);
+    font-size: clamp(16px, 2vw, 20px);
+    font-weight: 400;
+    transition: 0.35s linear;
+}
+
+.secondary-btn {
+    padding: 11px 44px;
+    border-radius: 100px;
+    color: var(--dark-text);
+    border: 1px solid var(--dark-text);
+    font-size: clamp(16px, 2vw, 20px);
+    font-weight: 400;
+    transition: 0.35s linear;
+}
+
+.tertiary-btn {
+    padding: 11px 44px;
+    border-radius: 100px;
+    color: var(--light-text);
+    background: var(--dark-text);
+    border: 1px solid transparent;
+    font-size: clamp(16px, 2vw, 20px);
+    font-weight: 400;
+    transition: 0.35s linear;
+}
+
+.primary-btn:hover {
+    background: #7213f7;
+}
+
+.secondary-btn:hover,
+.tertiary-btn:hover {
+    background: var(--primary-color);
+    color: var(--light-text);
+    border: 1px solid transparent;
+}
+
+
+
+/* 
+##############################
+Header Section
+##############################
+*/
+.nav-logo a {
+    max-width: 276px;
+}
+
+.nav-logo a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header-sec {
+    position: fixed;
+    width: 100%;
+    top: 30px;
+    z-index: 99;
+    transition: all 0.3s ease;
+}
+
+.header-sec.scrolled {
+    top: 0;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(10px);
+}
+
+.sm-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid var(--dark-text);
+    padding: 10px;
+}
+
+.sm-btn i {
+    color: var(--dark-text);
+}
+
+.sm-top-btn {
+    background-color: var(--primary-color);
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    text-align: center;
+    color: var(--light-text);
+    font-size: 16px;
+    padding: 12px;
+    line-height: 1;
+}
+
+/* 
+##############################
+Hero Section
+##############################
+*/
+.hero-sec {
+    padding: clamp(180px, 15vw, 220px) 0 clamp(60px, 8vw, 100px);
+    background: url("../assets/hero-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 100vh; */
+}
+
+.title-1 {
+    font-size: clamp(35px, 6vw, 76px);
+    color: var(--dark-text);
+    text-align: center;
+    font-family: var(--ff-clash-regular);
+}
+
+.title-1 span {
+    color: var(--primary-color);
+}
+
+.hero-cntnt>p {
+    max-width: 859px;
+    margin: clamp(30px, 5vw, 60px) auto clamp(35px, 6vw, 65px);
+    font-size: clamp(16px, 2vw, 24px);
+    font-weight: 400;
+    line-height: calc(30/24);
+    text-align: center;
+}
+
+.hero-btn {
+    text-align: center;
+}
+
+.hero-btn .secondary-btn {
+    margin-left: 12px;
+}
+
+.funding-statistics {
+    margin-top: clamp(50px, 8vw, 100px);
+}
+
+.funding-card {
+    padding: clamp(18px, 3vw, 27px) clamp(20px, 4vw, 35px) clamp(25px, 5vw, 43px) clamp(22px, 4vw, 40px);
+    border-radius: 5px;
+    box-shadow: 0px 4px 34px 0px rgba(0, 0, 0, 0.05);
+    background: var(--light-text);
+}
+
+.funding-head {
+    display: flex;
+    align-items: center;
+}
+
+.funding-lft h4 {
+    font-size: clamp(22px, 2.5vw, 30px);
+    font-family: var(--ff-clash-light);
+}
+
+.funding-lft h4 span {
+    font-family: var(--ff-clash-regular);
+}
+
+.funding-rght {
+    margin-left: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.funding-rght::before {
+    content: "";
+    position: absolute;
+    width: 69px;
+    height: 69px;
+    background: #F5F5F5;
+    border-radius: 50%;
+    top: 0;
+    right: 15px;
+    z-index: -1;
+}
+
+.funding-card p {
+    margin-top: 16px;
+    font-size: clamp(30px, 4vw, 45px);
+    color: var(--primary-color);
+    font-family: var(--ff-clash-semibold);
+}
+
+.funding-card svg path {
+    fill: #7213f7;
+}
+
+
+.funding-card:hover {
+    background: var(--primary-color);
+    color: var(--light-text);
+}
+
+.funding-card:hover p {
+    color: var(--light-text) !important;
+}
+
+
+.funding-card:hover svg path {
+    fill: #fff;
+}
+
+.funding-card:hover .funding-rght::before {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+
+/* 
+##############################
+Media Query
+##############################
+*/
+@media screen and (max-width: 767.98px) {
+
+    /* Header Section */
+    .nav-logo a {
+        max-width: 200px;
+    }
+
+    .nav-btn .secondary-btn {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    /* Header Section */
+    .header-sec {
+        top: 0;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+
+    /* Header Section */
+    .nav-logo a {
+        max-width: 170px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+
+    /* Hero Section */
+    .hero-btn .tertiary-btn {
+        width: 100%;
+    }
+
+    .hero-btn .secondary-btn {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
