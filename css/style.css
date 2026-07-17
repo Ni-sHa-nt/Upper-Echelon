@@ -219,6 +219,7 @@ Hero Section
     border-radius: 5px;
     box-shadow: 0px 4px 34px 0px rgba(0, 0, 0, 0.05);
     background: var(--light-text);
+    transition: 0.35s linear;
 }
 
 .funding-head {
@@ -229,6 +230,7 @@ Hero Section
 .funding-lft h4 {
     font-size: clamp(22px, 2.5vw, 30px);
     font-family: var(--ff-clash-light);
+    transition: 0.35s linear;
 }
 
 .funding-lft h4 span {
@@ -258,6 +260,7 @@ Hero Section
     font-size: clamp(30px, 4vw, 45px);
     color: var(--primary-color);
     font-family: var(--ff-clash-semibold);
+    transition: 0.35s linear;
 }
 
 .funding-card svg path {
@@ -282,6 +285,64 @@ Hero Section
 .funding-card:hover .funding-rght::before {
     background: rgba(255, 255, 255, 0.2);
 }
+
+/* 
+##############################
+Trusted Section
+##############################
+*/
+.trusted-sec {
+    padding: clamp(60px, 8vw, 100px) 0px;
+}
+
+.trusted-sec h2 {
+    font-size: clamp(18px, 2vw, 24px);
+    text-align: center;
+    color: #0B1220;
+    margin-bottom: 45px;
+}
+
+.trusted-sec h2 span{
+    color: var(--primary-color);
+}
+
+.marqueeSwiper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.marqueeSwiper .swiper-wrapper {
+    transition-timing-function: linear !important;
+    display: flex;
+    align-items: center;
+}
+
+.marqueeSwiper .swiper-slide {
+    width: auto;
+    flex-shrink: 0;
+    /* padding: 0 40px; */
+    /* font-size: 24px; */
+    /* font-weight: 600; */
+    /* white-space: nowrap; */
+}
+
+.marqueeSwiper .swiper-slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* 
