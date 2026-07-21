@@ -52,3 +52,57 @@ marquee.addEventListener("mouseenter", () => {
 marquee.addEventListener("mouseleave", () => {
     marqueeSwiper.autoplay.start();
 });
+
+
+// Hero Section Counter Added on Cards
+const counters = document.querySelectorAll(".counter");
+const section = document.querySelector(".funding-statistics");
+
+let started = false;
+
+const observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting && !started) {
+        started = true;
+
+        counters.forEach(counter => {
+            const target = parseFloat(counter.dataset.target);
+            const text = counter.dataset.target;
+            const duration = 1000; // 1 second
+
+            function animate(startTime) {
+
+                function update(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+
+                    // Ease Out Cubic
+                    const ease = 1 - Math.pow(1 - progress, 3);
+
+                    const current = target * ease;
+
+                    if (text.includes(".")) {
+                        counter.textContent = `$${current.toFixed(1)}M`;
+                    } else if (text === "50") {
+                        counter.textContent = `$${Math.floor(current)}K`;
+                    } else {
+                        counter.textContent = `$${Math.floor(current)}M`;
+                    }
+
+                    if (progress < 1) {
+                        requestAnimationFrame(update);
+                    }
+                }
+
+                requestAnimationFrame(update);
+            }
+
+            requestAnimationFrame(animate);
+        });
+
+        observer.disconnect();
+    }
+}, {
+    threshold: 0.4
+});
+
+observer.observe(section);
